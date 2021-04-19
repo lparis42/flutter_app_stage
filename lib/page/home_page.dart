@@ -74,7 +74,8 @@ class _HomePageState extends State<HomePage> {
 
   Future capture(MediaSource source) async {
     setState(() {
-      fileMedia = null;
+      this.fileMedia = null;
+      this.source = source;
     });
 
     final result = await Navigator.of(context).push(MaterialPageRoute(
